@@ -1,12 +1,11 @@
 module.exports = {
-  outputDir: "./dist",
+  outputDir: './dist',
   devServer: {
     proxy: {
-      "/api": {
-        target:
-          "http://localhost:" + require("../server/src/config").default.port,
+      '/api': {
+        target: 'http://localhost:' + require('../server/src/config').default.port,
       },
     },
   },
-  publicPath: "/",
+  publicPath: '/',
 };
