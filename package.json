@@ -1,0 +1,11 @@
+{
+  "name": "mevn-stack-boilerplate",
+  "version": "0.0.1",
+  "description": "Boilerplate for mevn stack projects",
+  "scripts": {
+    "build": "npm run build --prefix \"src/client\" && npm run build --prefix \"src/server\"",
+    "dev": "concurrently \"npm run serve --prefix \\\"src/client\\\"\" \"npm run start --prefix \\\"src/server\\\"\""
+  },
+  "author": "Jari van der Kaap",
+  "license": "ISC"
+}
