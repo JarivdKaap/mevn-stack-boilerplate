@@ -3,7 +3,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: 'http://localhost:' + require('../server/src/config').default.port,
+        target: 'http://localhost:5000',
       },
     },
   },
