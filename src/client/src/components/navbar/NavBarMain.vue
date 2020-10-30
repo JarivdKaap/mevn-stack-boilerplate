@@ -10,6 +10,9 @@
         <router-link to="/">Home</router-link>
       </b-navbar-item>
       <b-navbar-item>
+        <router-link to="/chat">Chat</router-link>
+      </b-navbar-item>
+      <b-navbar-item>
         <router-link to="/about">About</router-link>
       </b-navbar-item>
       <b-navbar-item v-if="!isLoggedIn">
