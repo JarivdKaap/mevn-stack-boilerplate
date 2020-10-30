@@ -3,6 +3,7 @@ import express from 'express';
 import config from './config';
 
 import Logger from './loaders/logger';
+import SocketIoLoader from './loaders/socketio'
 
 async function startServer() {
   // Create an instance of the server
@@ -12,7 +13,7 @@ async function startServer() {
   await require('./loaders').default({ expressApp: app });
 
   // Start up the servers
-  app.listen(config.port, err => {
+  const server = app.listen(config.port, err => {
     if (err) {
       Logger.error(err);
       process.exit(1);
@@ -22,6 +23,7 @@ async function startServer() {
       Server started at port ${config.port}
     `);
   });
+  SocketIoLoader({server})
 }
 
 startServer();
