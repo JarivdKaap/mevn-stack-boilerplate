@@ -9,7 +9,7 @@
       <b-navbar-item>
         <router-link to="/">Home</router-link>
       </b-navbar-item>
-      <b-navbar-item>
+      <b-navbar-item v-if="isLoggedIn" >
         <router-link to="/chat">Chat</router-link>
       </b-navbar-item>
       <b-navbar-item>
