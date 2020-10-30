@@ -10,6 +10,9 @@ import io from 'socket.io-client';
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
 
+// ACL
+import './acl';
+
 Vue.use(Buefy);
 
 Vue.config.productionTip = false;

@@ -28,6 +28,10 @@ export default class AuthModule extends VuexModule {
     return this.activeUser.role != 'public';
   }
 
+  get userRole(): string {
+    return this.activeUser.role;
+  }
+
   @Mutation
   setBearer(token: string) {
     axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
